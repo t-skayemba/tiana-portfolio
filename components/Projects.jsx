@@ -1,0 +1,64 @@
+'use client'
+import { useRef } from 'react'
+import Link from 'next/link'
+import { motion, useInView } from 'framer-motion'
+import styles from './Projects.module.css'
+
+const projects = [
+  {
+    id: 'cadence',
+    num: '01',
+    tag: 'AI · Health Tech',
+    title: 'Cadence',
+    description: 'An AI-powered circadian rhythm predictor that maps your body clock using Apple Health data or a short quiz.',
+  },
+  {
+    id: 'rag-demo',
+    num: '02',
+    tag: 'AI · RAG',
+    title: 'Ask Anything',
+    description: 'Drop in any document, PDF, or URL. Ask it anything. A live context-grounded Q&A pipeline powered by Claude.',
+  },
+]
+
+const MotionLink = motion(Link)
+
+export default function Projects() {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+
+  return (
+    <section id="projects" className={styles.section}>
+      <motion.p className={styles.label}
+        initial={{ opacity: 0, y: 10 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5 }}>
+        Selected work
+      </motion.p>
+      <motion.h2 className={styles.heading}
+        initial={{ opacity: 0, y: 10 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.08 }}>
+        Projects
+      </motion.h2>
+      <div className={styles.grid} ref={ref}>
+        {projects.map((p, i) => (
+          <MotionLink
+            key={p.id}
+            href={`/projects/${p.id}`}
+            className={styles.card}
+            initial={{ opacity: 0, y: 28 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span className={styles.cardNum}>{p.num}</span>
+            <p className={styles.cardTag}>{p.tag}</p>
+            <h3 className={styles.cardTitle}>{p.title}</h3>
+            <p className={styles.cardDesc}>{p.description}</p>
+            <span className={styles.cardLink}>View project →</span>
+          </MotionLink>
+        ))}
+      </div>
+    </section>
+  )
+}
