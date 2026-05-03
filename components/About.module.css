@@ -153,6 +153,16 @@
     gap: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .pillGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skillsBox {
+    padding: 1.25rem;
+  }
+}
+
 .pill {
     background: var(--cream-dim);
     color: var(--cream);
@@ -179,9 +189,24 @@
 }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr 1fr; }
-  .photoCol { grid-column: 1 / -1; }
-  .photoWrap { aspect-ratio: 16 / 7; }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photoCol {
+    grid-column: 1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .photoWrap {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+
+  .photo {
+    object-position: center top;
+  }
 }
 
 @media (max-width: 600px) {
