@@ -4,17 +4,16 @@ import { motion } from 'framer-motion'
 import styles from './Hero.module.css'
 
 const headlineWords = [
-    { text: 'I',        gold: false},
-    { text: 'build',    gold: false},
-    { text: 'AI',       gold: false},
-    { text: 'systems',  gold: false},
-    { text: 'that',     gold: false},
-    { text: 'actually', gold: false},
-    { text: 'work',     gold: false},
-    { text: 'in',       gold: false},
-    { text: 'the',      gold: false},
-    { text: 'real',     gold: false},
-    { text: 'world',    gold: false},
+    { text: 'I',            gold: false},
+    { text: 'build',        gold: false},
+    { text: 'efficient',    gold: false},
+    { text: 'systems',      gold: false},
+    { text: 'that',         gold: false},
+    { text: 'work',         gold: false},
+    { text: 'in',           gold: false},
+    { text: 'the',          gold: false},
+    { text: 'real',         gold: false},
+    { text: 'world',        gold: false},
 ]
 
 const tags = [
