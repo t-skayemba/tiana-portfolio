@@ -1,6 +1,6 @@
 # tianakayemba.dev
 
-Personal portfolio site - designed and built from scratch.
+Personal portfolio website - designed and built from scratch.
 
 ## Built with
 Next.js · Framer Motion · CSS Modules · Anthropic API
