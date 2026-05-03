@@ -210,7 +210,7 @@
   }
 
   .photo {
-    object-position: center top;
+    object-position: center 20%;
   }
 }
 
