@@ -139,10 +139,10 @@ export default function RagDemoPage() {
             </div>
 
             {/* --- Next Project --- */}
-            <Link href="/projects/cadence" className={styles.nextProject}>
+            <Link href="/projects/arkive" className={styles.nextProject}>
                     <div>
-                        <p className={styles.nextLabel}>Previous Project</p>
-                        <p className={styles.nextTitle}>Cadence</p>
+                        <p className={styles.nextLabel}>Next Project</p>
+                        <p className={styles.nextTitle}>Arkive</p>
                     </div>
                     <span className={styles.nextArrow}>←</span>
             </Link>

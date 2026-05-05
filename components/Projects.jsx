@@ -19,6 +19,13 @@ const projects = [
     title: 'Ask Anything',
     description: 'Drop in any document, PDF, or URL. Ask it anything. A live context-grounded Q&A pipeline powered by Claude.',
   },
+  {
+    id: 'arkive',
+    num: '03',
+    tag: 'AI · Enterprise Tools · RAG',
+    title: 'Arkive',
+    description: 'Upload any documents, ask it anything. An enterprise RAG knowledge base with source citations, document preview, and highlighted passages — powered by Claude.',
+  },
 ]
 
 const MotionLink = motion(Link)
