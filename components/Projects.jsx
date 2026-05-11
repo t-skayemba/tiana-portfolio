@@ -26,6 +26,13 @@ const projects = [
     title: 'Arkive',
     description: 'Upload any documents, ask it anything. An enterprise RAG knowledge base with source citations, document preview, and highlighted passages — powered by Claude.',
   },
+  {
+    id: 'nexadesk',
+    num: '04',
+    tag: 'AI · SaaS · White-Label',
+    title: 'NexaDesk',
+    description: 'A white-label AI customer support widget that answers from a custom knowledge base, escalates to humans when needed, and logs every conversation — deployable on any website with one script tag.'
+  }
 ]
 
 const MotionLink = motion(Link)
