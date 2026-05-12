@@ -69,7 +69,7 @@ export default function NexaDesk() {
                     { num: 'RAG', desc: 'Answers grounded in the client\'s own knowledge base — not generic AI responses' },
                     { num: '2-tier', desc: 'Escalation logic — tries to resolve first, only hands off when genuinely needed' },
                     { num: '1 tag', desc: 'One script tag to embed on any website — WordPress, Webflow, Shopify, plain HTML' },
-                    { num: 'Live', desc: 'Fully deployed on Railway with a live brand customizer demo' },
+                    { num: 'Live', desc: 'Fully deployed on Railway with PostgreSQL and a live brand customizer demo' },
                 ].map(s => (
                     <div key={s.num} className={styles.statBox}>
                         <div className={styles.statNum}>{s.num}</div>
@@ -90,14 +90,14 @@ export default function NexaDesk() {
                         When a conversation needs a human, NexaDesk escalates intelligently. Rather than immediately handing off the moment someone mentions a person, it attempts to resolve the issue first and only escalates when the user insists or the issue genuinely requires it. On escalation, the support team is notified instantly via Slack or email with the full conversation transcript attached.
                     </p>
                     <p className={styles.bodyT}>
-                        The demo includes a live brand customizer — prospects can enter their company name, pick their brand colours, and upload their logo to see the widget styled to their brand in real time, before committing to anything.
+                        Every conversation is logged to a PostgreSQL database on Railway — timestamped, flagged for escalation, and accessible via a protected admin endpoint. The demo includes a live brand customizer where prospects can enter their company name, pick brand colours, and upload a logo to see the widget styled to their brand in real time.
                     </p>
                 </div>
                 <aside className={styles.sidebar}>
                     <div className={styles.sidebarBlock}>
                         <p className={styles.sidebarLabel}>Tech Stack</p>
                         {[
-                            'Node.js', 'Express', 'SQLite',
+                            'Node.js', 'Express', 'PostgreSQL',
                             'Anthropic Claude API', 'Nodemailer',
                             'Slack Webhooks', 'Vanilla JS', 'HTML/CSS', 'Railway'
                         ].map(t => (
@@ -143,7 +143,7 @@ export default function NexaDesk() {
                         },
                         {
                             num: '03',
-                            text: 'The embed script architecture matters more than it seems. Building the backend to serve a dynamic embed.js that self-bootstraps means clients genuinely only need one line of HTML. The difference between "add this script tag" and "follow these five setup steps" is the difference between a sale and a pass.',
+                            text: 'The embed script architecture matters more than it seems. Building the backend to serve a dynamic embed.js that self-bootstraps means clients genuinely only need one line of HTML. And migrating from SQLite to PostgreSQL early — with async connection pooling — means the system is ready for multi-client scale from day one.',
                         },
                     ].map(l => (
                         <div key={l.num} className={styles.learningCard}>

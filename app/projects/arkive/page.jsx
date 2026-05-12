@@ -168,10 +168,10 @@ export default function Arkive() {
             </div>
 
             {/* --- Next Project --- */}
-            <Link href="/projects/cadence" className={styles.nextProject}>
+            <Link href="/projects/nexadesk" className={styles.nextProject}>
                 <div>
                     <p className={styles.nextLabel}>Next Project</p>
-                    <p className={styles.nextTitle}>Cadence</p>
+                    <p className={styles.nextTitle}>NexaDesk</p>
                 </div>
                 <span className={styles.nextArrow}>→</span>
             </Link>
