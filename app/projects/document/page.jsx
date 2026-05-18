@@ -168,7 +168,7 @@ export default function DocAgent() {
             <Link href="/projects/cadence" className={styles.nextProject}>
                 <div>
                     <p className={styles.nextLabel}>Next Project</p>
-                    <p className={styles.nextTitle}><Cadence></Cadence></p>
+                    <p className={styles.nextTitle}>Cadence</p>
                 </div>
                 <span className={styles.nextArrow}>→</span>
             </Link>
