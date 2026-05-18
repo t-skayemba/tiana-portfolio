@@ -3,11 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata = {
-    title: 'NexaDesk - Tiana Kayemba',
-    description: 'A white-label AI customer support widget that answers from a custom knowledge base, escalates to humans when needed, and logs every conversation.',
+    title: 'DocAgent - Tiana Kayemba',
+    description: 'An AI document processing agent that extracts structured data from any PDF, flags risks and discrepancies, and delivers plain-English summaries — invoices, contracts, legal filings, and scanned documents via OCR.',
 }
 
-export default function NexaDesk() {
+export default function DocAgent() {
     return (
         <main className={styles.page}>
 
@@ -20,15 +20,15 @@ export default function NexaDesk() {
             {/* --- Hero --- */}
             <section className={styles.hero}>
                 <div className={styles.eyebrow}>
-                    <span className={`${styles.tag} ${styles.tagAi}`}>AI · SaaS · White-Label</span>
+                    <span className={`${styles.tag} ${styles.tagAi}`}>AI · Document Intelligence · Python</span>
                     <span className={`${styles.tag} ${styles.tagLive}`}>
                         <span className={styles.liveDot} />
                         Live
                     </span>
                 </div>
-                <h1 className={styles.title}>NexaDesk</h1>
+                <h1 className={styles.title}>DocAgent</h1>
                 <p className={styles.subtitle}>
-                    A white-label AI customer support widget that answers questions from a custom knowledge base, knows when to hand off to a human agent, and logs every conversation — deployable on any website with a single script tag.
+                    An AI document processing agent that extracts structured data from any PDF, flags risks and discrepancies, and delivers plain-English summaries — supporting invoices, contracts, legal filings, and scanned documents via OCR.
                 </p>
                 <div className={styles.metaRow}>
                     <div className={styles.meta}>
@@ -55,8 +55,8 @@ export default function NexaDesk() {
                         <span className={styles.dot} />
                     </div>
                     <Image
-                        src="/screenshot-nexadesk.png"
-                        alt="NexaDesk App Screenshot"
+                        src="/screenshot-docagent.png"
+                        alt="DocAgent App Screenshot"
                         fill
                         className={styles.screenshot}
                     />
@@ -66,10 +66,10 @@ export default function NexaDesk() {
             {/* --- Stats --- */}
             <div className={styles.statsRow}>
                 {[
-                    { num: 'RAG', desc: 'Answers grounded in the client\'s own knowledge base — not generic AI responses' },
-                    { num: '2-tier', desc: 'Escalation logic — tries to resolve first, only hands off when genuinely needed' },
-                    { num: '1 tag', desc: 'One script tag to embed on any website — WordPress, Webflow, Shopify, plain HTML' },
-                    { num: 'Live', desc: 'Fully deployed on Railway with PostgreSQL and a live brand customizer demo' },
+                    { num: 'OCR', desc: 'Scanned PDFs auto-detected and routed through Tesseract — no manual steps needed' },
+                    { num: 'Multi-signal', desc: 'Scanned document detection uses image presence, text objects, and character density — not just word count' },
+                    { num: 'Chunk+', desc: 'Large documents split at natural boundaries, each section summarised independently — nothing gets dropped' },
+                    { num: 'Live', desc: 'Fully deployed on Railway with a custom subdomain and SQLite job queue for processing history' },
                 ].map(s => (
                     <div key={s.num} className={styles.statBox}>
                         <div className={styles.statNum}>{s.num}</div>
@@ -82,32 +82,32 @@ export default function NexaDesk() {
             <div className={styles.content}>
                 <div>
                     <p className={styles.secLabel}>Overview</p>
-                    <h2 className={styles.secH}>What is NexaDesk?</h2>
+                    <h2 className={styles.secH}>What is DocAgent?</h2>
                     <p className={styles.bodyT}>
-                        NexaDesk is a complete, deployable AI customer support system built for businesses that want to automate the majority of their support volume without losing the human touch. The bot answers questions by reading the client's own knowledge base — FAQs, policies, product documentation — so every response is accurate and specific to their business.
+                        DocAgent is a complete, deployable AI document processing tool built for legal, finance, and real estate workflows. Drop in any PDF and it extracts structured data — parties, dates, amounts, obligations, clauses — validates it against strict Pydantic schemas, and returns a plain-English summary alongside a ranked list of flagged issues.
                     </p>
                     <p className={styles.bodyT}>
-                        When a conversation needs a human, NexaDesk escalates intelligently. Rather than immediately handing off the moment someone mentions a person, it attempts to resolve the issue first and only escalates when the user insists or the issue genuinely requires it. On escalation, the support team is notified instantly via Slack or email with the full conversation transcript attached.
+                        The pipeline handles the full range of real-world document problems. Scanned documents are detected using multiple signals and automatically routed through Tesseract OCR. Password-protected and corrupted files are rejected early with clear error messages. Large documents are split at natural boundaries, each section summarised independently, then combined — so nothing gets dropped or truncated.
                     </p>
                     <p className={styles.bodyT}>
-                        Every conversation is logged to a PostgreSQL database on Railway — timestamped, flagged for escalation, and accessible via a protected admin endpoint. The demo includes a live brand customizer where prospects can enter their company name, pick brand colours, and upload a logo to see the widget styled to their brand in real time.
+                        When the LLM returns malformed output, the system retries with a progressively stricter prompt rather than failing silently. Every processing job is logged to a SQLite queue with full status tracking, so failed jobs are always recoverable. The UI stores session history so past documents are instantly accessible from the sidebar without reprocessing.
                     </p>
                 </div>
                 <aside className={styles.sidebar}>
                     <div className={styles.sidebarBlock}>
                         <p className={styles.sidebarLabel}>Tech Stack</p>
                         {[
-                            'Node.js', 'Express', 'PostgreSQL',
-                            'Anthropic Claude API', 'Nodemailer',
-                            'Slack Webhooks', 'Vanilla JS', 'HTML/CSS', 'Railway'
+                            'Python', 'Streamlit', 'Anthropic Claude API',
+                            'pdfplumber', 'Tesseract OCR', 'Pydantic v2',
+                            'SQLite', 'pikepdf', 'pdf2image', 'Railway'
                         ].map(t => (
                             <span key={t} className={styles.stackPill}>{t}</span>
                         ))}
                     </div>
                     <div className={styles.sidebarBlock}>
                         <p className={styles.sidebarLabel}>Links</p>
-                        <a href="https://nexadesk.tianakayemba.dev" className={styles.sidebarLink} target="_blank" rel="noopener noreferrer">↗ Live Demo</a>
-                        <a href="https://github.com/t-skayemba/nexadesk" className={styles.sidebarLink} target="_blank" rel="noopener noreferrer">↗ GitHub</a>
+                        <a href="https://docagent.tianakayemba.dev" className={styles.sidebarLink} target="_blank" rel="noopener noreferrer">↗ Live Demo</a>
+                        <a href="https://github.com/t-skayemba/document-processor" className={styles.sidebarLink} target="_blank" rel="noopener noreferrer">↗ GitHub</a>
                     </div>
                 </aside>
             </div>
@@ -117,13 +117,13 @@ export default function NexaDesk() {
                 <div className={styles.psBox}>
                     <p className={`${styles.psLabel} ${styles.psLabelProblem}`}>The Problem</p>
                     <p className={styles.psText}>
-                        Small and mid-size businesses get buried in repetitive support tickets — the same 15 questions asked hundreds of times a week. Hiring more agents is expensive. Generic chatbots feel robotic and give wrong answers. And when a customer genuinely needs help, there's no clean way to get them to a real person without losing the context of the conversation.
+                        Legal and finance teams spend hours manually reviewing contracts and invoices — checking for math errors, flagging risky clauses, extracting key dates and parties into spreadsheets. Scanned documents make it worse. And when something is missed — a liability cap buried in section 4, a payment term that compounds at 60% annually — the cost is real.
                     </p>
                 </div>
                 <div className={`${styles.psBox} ${styles.psBoxRight}`}>
                     <p className={`${styles.psLabel} ${styles.psLabelSolution}`}>The Solution</p>
                     <p className={styles.psText}>
-                        A widget that reads the company's own documentation to answer the 80% of tickets that are routine — and handles the other 20% by escalating to a human with the full conversation attached. White-label so it looks native to any brand. One script tag so any website can have it live in minutes. Slack and email notifications so no escalation ever gets missed.
+                        A document agent that reads the entire file — text or scanned — extracts every material field into structured JSON, and surfaces issues ranked by severity before a human ever opens the document. Critical flags like arithmetic errors or asymmetric termination clauses appear immediately, with the exact location and a specific recommendation attached.
                     </p>
                 </div>
             </div>
@@ -135,15 +135,15 @@ export default function NexaDesk() {
                     {[
                         {
                             num: '01',
-                            text: 'Keyword search for knowledge base retrieval breaks the moment users paraphrase anything. Injecting the full knowledge base into every Claude request and letting the model find relevance itself is simpler, more accurate, and the right default until the KB grows large enough to warrant vector search.',
+                            text: 'Scanned PDF detection cannot rely on character count alone. A single-page cover sheet with one line of text would be misidentified as scanned. The right approach combines image presence, text object count, and character density relative to page area — multiple independent signals that all need to agree before routing to OCR.',
                         },
                         {
                             num: '02',
-                            text: 'Escalation logic is a product decision, not just a technical one. Immediately handing off to a human whenever someone asks for one creates unnecessary load on support teams. A two-tier system — try to resolve first, escalate only when needed — is both better UX and a concrete business value to sell to clients.',
+                            text: 'LLMs return bad JSON more often than expected in production, and retrying with the same prompt produces the same result. A two-prompt strategy — friendly initial prompt, then a strict retry that explicitly forbids every formatting mistake observed — solves 95% of failures. The retry prompt is a product decision, not just error handling.',
                         },
                         {
                             num: '03',
-                            text: 'The embed script architecture matters more than it seems. Building the backend to serve a dynamic embed.js that self-bootstraps means clients genuinely only need one line of HTML. And migrating from SQLite to PostgreSQL early — with async connection pooling — means the system is ready for multi-client scale from day one.',
+                            text: 'Truncating large documents is the wrong default. The middle of a contract often contains the most material clauses — liability caps, IP ownership, indemnification. Chunking at natural boundaries (page breaks → paragraphs → sentences) and summarising each section independently preserves everything while staying within the model\'s context window.',
                         },
                     ].map(l => (
                         <div key={l.num} className={styles.learningCard}>
@@ -156,19 +156,19 @@ export default function NexaDesk() {
 
             {/* --- CTA --- */}
             <div className={styles.ctaRow}>
-                <a href="https://nexadesk.tianakayemba.dev" className={styles.btnPrimary} target="_blank" rel="noopener noreferrer">
-                    Try NexaDesk Live →
+                <a href="https://docagent.tianakayemba.dev" className={styles.btnPrimary} target="_blank" rel="noopener noreferrer">
+                    Try DocAgent Live →
                 </a>
-                <a href="https://github.com/t-skayemba/nexadesk" className={styles.btnGhost} target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/t-skayemba/document-processor" className={styles.btnGhost} target="_blank" rel="noopener noreferrer">
                     View source on GitHub
                 </a>
             </div>
 
             {/* --- Next Project --- */}
-            <Link href="/projects/docagent" className={styles.nextProject}>
+            <Link href="/projects/cadence" className={styles.nextProject}>
                 <div>
                     <p className={styles.nextLabel}>Next Project</p>
-                    <p className={styles.nextTitle}>DocAgent</p>
+                    <p className={styles.nextTitle}><Cadence></Cadence></p>
                 </div>
                 <span className={styles.nextArrow}>→</span>
             </Link>

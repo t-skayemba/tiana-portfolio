@@ -32,6 +32,13 @@ const projects = [
     tag: 'AI · SaaS · White-Label',
     title: 'NexaDesk',
     description: 'A white-label AI customer support widget that answers from a custom knowledge base, escalates to humans when needed, and logs every conversation — deployable on any website with one script tag.'
+  },
+  {
+    id: 'docagent',
+    num: '05',
+    tag: 'AI · Document Intelligence · Python',
+    title: 'DocAgent',
+    description: 'An AI document processing agent that extracts structured data from any PDF, flags risks and discrepancies, and delivers plain-English summaries — invoices, contracts, legal filings, and scanned documents via OCR.'
   }
 ]
 
