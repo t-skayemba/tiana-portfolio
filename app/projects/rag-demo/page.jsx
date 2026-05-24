@@ -80,10 +80,10 @@ export default function RagDemoPage() {
                         Retrieval-Augmented Generation (RAG) is one of the most practically useful patterns in applied AI. Instead of relying pureply on what a language model was trained on, RAG grounds the model's responses in a specific document of knowledge source you provide - making answers accurate, specific, and verifiable.
                     </p>
                     <p className={styles.bodyT}>
-                        This demo lets you experience that pipeline directly. Paste in a contract, upload a research paper, drop in a news article URL - then ask qustions ang get answers grounded in that exact content. No allucinations about things not in the document. No generic responses.
+                        This demo lets you experience that pipeline directly. Paste in a contract, upload a research paper, drop in a news article URL - then ask questions and get answers grounded in that exact content. No hallucinations about things not in the document. No generic responses.
                     </p>
                     <p className={styles.bodyT}>
-                        Under the hood, the document is passes as context to Claude via the Anthropic API, with a system propmt engineered to keep responses grounded, cite specific sections, and flag when something isn't in the document.
+                        Under the hood, the document is passes as context to Claude via the Anthropic API, with a system prompt engineered to keep responses grounded, cite specific sections, and flag when something isn't in the document.
                     </p>
                 </div>
                 <aside className={styles.sidebar}>
@@ -105,10 +105,10 @@ export default function RagDemoPage() {
                 <p className={styles.secLabel}>How It Works</p>
                 <div className={styles.steps}>
                     {[
-                        { num: '01', title: 'Ingest', desc: 'You provide a document - plan text, a PDF file, or any publically accessible URL. The content is extracted and cleaned.' },
+                        { num: '01', title: 'Ingest', desc: 'You provide a document - plain text, a PDF file, or any publicly accessible URL. The content is extracted and cleaned.' },
                         { num: '02', title: 'Context', desc: 'The document is passed as context in the system prompt, with instructions to ground all answers in the provided content.' },
-                        { num: '03', title: 'Retreive and Generate', desc: 'When you ask a question, Claude retrieves the relevant parts of the context and generate a grounded, cited response.' },
-                        { num: '04', title: 'Converse', desc: 'The full conversation history is maintained so you can ask follow-up questions and dig deeper into teh document.' },
+                        { num: '03', title: 'Retrieve and Generate', desc: 'When you ask a question, Claude retrieves the relevant parts of the context and generate a grounded, cited response.' },
+                        { num: '04', title: 'Converse', desc: 'The full conversation history is maintained so you can ask follow-up questions and dig deeper into the document.' },
                     ].map(s => (
                         <div key={s.num} className={styles.step}>
                             <div className={styles.stepNum}>{s.num}</div>
