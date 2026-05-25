@@ -39,7 +39,7 @@ export default function Contact() {
         throw new Error('Something went wrong.')
       }
     } catch (err) {
-      setError('Failed to send — please email me directly at hello@tianakayemba.dev')
+      setError('Failed to send — please email me directly at tiana@tianakayemba.dev')
     } finally {
       setSubmitting(false)
     }
@@ -56,7 +56,7 @@ export default function Contact() {
             interesting collaborations. If you have a project in mind, I'd love
             to hear about it.
           </p>
-          <a href="mailto:hello@tianakayemba.dev" className={styles.link}>✉ hello@tianakayemba.dev</a>
+          <a href="mailto:tiana@tianakayemba.dev" className={styles.link}>✉ tiana@tianakayemba.dev</a>
           <a href="https://linkedin.com/in/tiana-kayemba" className={styles.link} target="_blank" rel="noopener noreferrer">↗ LinkedIn</a>
           <a href="https://github.com/t-skayemba" className={styles.link} target="_blank" rel="noopener noreferrer">↗ GitHub</a>
         </FadeUp>
