@@ -27,7 +27,7 @@ export default function Contact() {
     setError(null)
     const form = e.target
     try {
-      const res = await fetch('https://formspree.io/f/xvzywqpo', {
+      const res = await fetch('https://formspree.io/f/mykokwny', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form),
@@ -39,7 +39,7 @@ export default function Contact() {
         throw new Error('Something went wrong.')
       }
     } catch (err) {
-      setError('Failed to send — please email me directly at tiana@tianakayemba.dev')
+      setError('Failed to send — please email me directly at tskayemba@gmail.com')
     } finally {
       setSubmitting(false)
     }
@@ -56,7 +56,7 @@ export default function Contact() {
             interesting collaborations. If you have a project in mind, I'd love
             to hear about it.
           </p>
-          <a href="mailto:tiana@tianakayemba.dev" className={styles.link}>✉ tiana@tianakayemba.dev</a>
+          <a href="mailto:tskayemba@gmail.com" className={styles.link}>✉ tskayemba@gmail.com</a>
           <a href="https://linkedin.com/in/tiana-kayemba" className={styles.link} target="_blank" rel="noopener noreferrer">↗ LinkedIn</a>
           <a href="https://github.com/t-skayemba" className={styles.link} target="_blank" rel="noopener noreferrer">↗ GitHub</a>
         </FadeUp>

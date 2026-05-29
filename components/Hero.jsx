@@ -88,8 +88,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 1.0 }}>
             {[
             { num: '4th', label: 'Year CS' },
-            { num: '2', label: 'Live projects' },
-            { num: '1', label: 'Deployed app' },
+            { num: '5', label: 'Live projects' },
+            { num: '5', label: 'Deployed apps' },
             ].map((s, i) => (
             <div key={i} className={styles.stat}>
                 <div className={styles.statNum}>{s.num}</div>
