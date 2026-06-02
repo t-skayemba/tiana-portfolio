@@ -22,21 +22,21 @@ const projects = [
   {
     id: 'arkive',
     num: '03',
-    tag: 'AI · Enterprise Tools · RAG',
+    tag: 'AI · Enterprise Tools · Refraxis',
     title: 'Arkive',
     description: 'Upload any documents, ask it anything. An enterprise RAG knowledge base with source citations, document preview, and highlighted passages — powered by Claude.',
   },
   {
     id: 'nexadesk',
     num: '04',
-    tag: 'AI · SaaS · White-Label',
+    tag: 'AI · SaaS · Refraxis',
     title: 'NexaDesk',
     description: 'A white-label AI customer support widget that answers from a custom knowledge base, escalates to humans when needed, and logs every conversation — deployable on any website with one script tag.'
   },
   {
     id: 'docagent',
     num: '05',
-    tag: 'AI · Document Intelligence · Python',
+    tag: 'AI · Document Intelligence · Refraxis',
     title: 'DocAgent',
     description: 'An AI document processing agent that extracts structured data from any PDF, flags risks and discrepancies, and delivers plain-English summaries — invoices, contracts, legal filings, and scanned documents via OCR.'
   }
@@ -62,6 +62,16 @@ export default function Projects() {
         transition={{ duration: 0.5, delay: 0.08 }}>
         Projects
       </motion.h2>
+      <motion.p className={styles.subheading}
+        initial={{ opacity: 0, y: 10 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.14 }}>
+        These projects form the technical foundation of{' '}
+        <a href="https://refraxis.ca" target="_blank" rel="noopener noreferrer">
+          Refraxis
+        </a>
+      </motion.p>
+      <div className={styles.grid} ref={ref}></div>
       <div className={styles.grid} ref={ref}>
         {projects.map((p, i) => (
           <MotionLink

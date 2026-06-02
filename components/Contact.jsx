@@ -27,7 +27,7 @@ export default function Contact() {
     setError(null)
     const form = e.target
     try {
-      const res = await fetch('https://formspree.io/f/mykokwny', {
+      const res = await fetch('https://formspree.io/f/xzdqpbvg', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form),
@@ -52,13 +52,14 @@ export default function Contact() {
           <p className={styles.label}>Contact</p>
           <h2 className={styles.heading}>Let's build something.</h2>
           <p className={styles.body}>
-            Open to AI implementation contracts, consulting, internships, and
-            interesting collaborations. If you have a project in mind, I'd love
-            to hear about it.
+            Open to AI implementation contracts and consulting engagements.
+            For professional enquires, please visit refraxis.ca
           </p>
-          <a href="mailto:tskayemba@gmail.com" className={styles.link}>✉ tskayemba@gmail.com</a>
+          <a href="mailto:tiana@refraxis.ca" className={styles.link}>✉ tiana@refraxis.ca</a>
+          <a href="https://www.refraxis.ca/" className={styles.link} target="_blank" rel="noopener noreferrer">↗ Refraxis</a>
           <a href="https://linkedin.com/in/tiana-kayemba" className={styles.link} target="_blank" rel="noopener noreferrer">↗ LinkedIn</a>
           <a href="https://github.com/t-skayemba" className={styles.link} target="_blank" rel="noopener noreferrer">↗ GitHub</a>
+          <a href="mailto:tskayemba@gmail.com" className={styles.link}>✉ tskayemba@gmail.com</a>
         </FadeUp>
 
         <FadeUp delay={0.15} className={styles.form}>

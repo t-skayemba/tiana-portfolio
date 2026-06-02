@@ -1,9 +1,9 @@
 import styles from './Marquee.module.css'
 
 const items = [
-  'Python', 'Flask', 'RAG Systems', 'Prompt Engineering',
+  'Python', 'LangGraph', 'RAG Systems', 'Prompt Engineering',
   'Machine Learning', 'REST APIs', 'PostgreSQL', 'AWS',
-  'Next.js', 'OpenAI API', 'Anthropic API', 'Open to Contracts',
+  'Next.js', 'OpenAI API', 'Anthropic API', 'Refraxis · refraxis.ca',
 ]
 
 export default function Marquee() {

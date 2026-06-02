@@ -3,25 +3,30 @@ import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import styles from './Hero.module.css'
 
-const headlineWords = [
-    { text: 'I',            gold: false},
-    { text: 'build',        gold: false},
-    { text: 'efficient',    gold: false},
-    { text: 'systems',      gold: false},
-    { text: 'that',         gold: false},
-    { text: 'work',         gold: false},
-    { text: 'in',           gold: false},
-    { text: 'the',          gold: false},
-    { text: 'real',         gold: false},
-    { text: 'world',        gold: false},
+const headlineWords1 = [
+    { text: 'I',               gold: false},
+    { text: 'build',           gold: false},
+    { text: 'AI',              gold: true},
+    { text: 'systems',         gold: false},
+    { text: 'for',             gold: false},
+    { text: 'regulated',       gold: true},
+    { text: 'industries',      gold: false},
+]
+
+const headlineWords2 = [
+    { text: 'Also:',           gold: false},
+    { text: '4th',             gold: false},
+    { text: 'year',            gold: false},
+    { text: 'CS',              gold: true},
+    { text: '@',               gold: true},
+    { text: 'UofT',            gold: true},
 ]
 
 const tags = [
-  { label: 'LLMs',         sage: false },
-  { label: 'Python',       sage: false },
-  { label: 'RAG',          sage: true  },
-  { label: 'Fine-tuning',  sage: false },
-  { label: 'Open to work', sage: true  },
+  { label: 'Document Processing',         sage: true },
+  { label: 'Workflow Automation',         sage: false },
+  { label: 'Canadian Data Residency',     sage: true  },
+  { label: 'AWS Canada Central',          sage: false },
 ]
 
 export default function Hero() {
@@ -38,14 +43,28 @@ export default function Hero() {
         <motion.h1 className={styles.heading}
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
-            {headlineWords.map((w, i) => (
-            <motion.span key={i}
-                className={`${styles.headingWord} ${w.gold ? styles.headingWordGold : ''}`}
-                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: 0.35 + i * 0.055, ease: [0.22, 1, 0.36, 1] }}>
-                {w.text}
-            </motion.span>
-            ))}
+            
+            <div className={styles.headingLine}>
+                {headlineWords1.map((w, i) => (
+                <motion.span key={i}
+                    className={`${styles.headingWord} ${w.gold ? styles.headingWordGold : ''}`}
+                    initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.45, delay: 0.35 + i * 0.055, ease: [0.22, 1, 0.36, 1] }}>
+                    {w.text}{' '}
+                </motion.span>
+                ))}
+            </div>
+
+            <div className={styles.headingLine}>
+                {headlineWords2.map((w, i) => (
+                <motion.span key={i}
+                    className={`${styles.headingWord} ${w.gold ? styles.headingWordGold : ''}`}
+                    initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.45, delay: 0.7 + i * 0.055, ease: [0.22, 1, 0.36, 1] }}>
+                    {w.text}{' '}
+                </motion.span>
+                ))}
+            </div>
         </motion.h1>
         </div>
 
@@ -53,14 +72,14 @@ export default function Hero() {
         <motion.p className={styles.eyebrow}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}>
-            Computer Science Student · University of Toronto
+            Founder & AI Systems Engineer · Refraxis
         </motion.p>
 
         <motion.p className={styles.sub}
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.55 }}>
-            Fourth-year CS student building real AI systems.
-            Open to internships, contracts, and interesting problems.
+            AI Systems Engineer and Founder of Refraxis.
+            I build production document processing and workflow automation for Canadian regulated industries.
         </motion.p>
 
         <motion.div className={styles.tagRow}
@@ -87,9 +106,8 @@ export default function Hero() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}>
             {[
-            { num: '4th', label: 'Year CS' },
-            { num: '5', label: 'Live projects' },
-            { num: '5', label: 'Deployed apps' },
+            { num: '5', label: 'Systems deployed' },
+            { num: '4', label: 'Industry specialties' },
             ].map((s, i) => (
             <div key={i} className={styles.stat}>
                 <div className={styles.statNum}>{s.num}</div>

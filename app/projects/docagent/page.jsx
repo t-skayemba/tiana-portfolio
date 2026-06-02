@@ -84,7 +84,7 @@ export default function DocAgent() {
                     <p className={styles.secLabel}>Overview</p>
                     <h2 className={styles.secH}>What is DocAgent?</h2>
                     <p className={styles.bodyT}>
-                        DocAgent is a complete, deployable AI document processing tool built for legal, finance, and real estate workflows. Drop in any PDF and it extracts structured data — parties, dates, amounts, obligations, clauses — validates it against strict Pydantic schemas, and returns a plain-English summary alongside a ranked list of flagged issues.
+                        DocAgent is a complete, deployable AI document processing tool built for legal, finance, and real estate workflows. Built as the technical foundation for Refraxis — document processing systems for Canadian accounting firms, legal practices, and municipalities. Drop in any PDF and it extracts structured data — parties, dates, amounts, obligations, clauses — validates it against strict Pydantic schemas, and returns a plain-English summary alongside a ranked list of flagged issues.
                     </p>
                     <p className={styles.bodyT}>
                         The pipeline handles the full range of real-world document problems. Scanned documents are detected using multiple signals and automatically routed through Tesseract OCR. Password-protected and corrupted files are rejected early with clear error messages. Large documents are split at natural boundaries, each section summarised independently, then combined — so nothing gets dropped or truncated.

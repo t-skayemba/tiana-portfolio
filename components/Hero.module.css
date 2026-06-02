@@ -44,10 +44,17 @@
   line-height: 1.35;
   color: var(--cream);
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 0.35rem;
   align-items: baseline;
   opacity: 0.75;
+}
+
+.headingLine {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
 }
 
 .headingWord { display: inline-block; }

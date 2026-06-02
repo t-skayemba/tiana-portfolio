@@ -5,11 +5,11 @@ import { motion, useInView } from 'framer-motion'
 import styles from './About.module.css'
 
 const skills = [
-  'Python', 'JavaScript', 'HTML', 'Flask',
+  'Python', 'JavaScript', 'HTML', 'LangGraph',
   'PostgreSQL', 'SQL', 'SQLAlchemy', 'REST APIs',
   'Chart.js', 'Tailwind CSS', 'React', 'Next.js',
   'OpenAI API', 'Anthropic API', 'RAG', 'Prompt Engineering',
-  'Machine Learning', 'AWS', 'OOP', 'Railway',
+  'Machine Learning', 'AWS', 'OOP', 'AWS Bedrock',
 ]
 
 const aiSkills = ['RAG', 'Fine-tuning', 'LLMs']
@@ -35,23 +35,20 @@ export default function About() {
 
         {/* Column 1: Bio */}
         <FadeUp delay={0}>
-          <h2 className={styles.heading}>A bit about me</h2>
+          <h2 className={styles.heading}>The person behind the work</h2>
           <p className={styles.lede}>
-            "I'm a Fourth-year CS student at the University of Toronto -
-            learning fast and building things that actually work."
+            "I'm an AI Systems Engineer and Founder of Refraxis - we build document processing and workflow automation systems for Canadian regulated industries"
           </p>
           <p className={styles.body}>
-            I got into AI because I wanted to build things that felt like magic
-            but worked like engineering. Cadence was my first real attempt at
-            that — using health data and LLMs to give people something genuinely
-            useful. I'm still early in that journey, but I build carefully and
-            I'm obsessed with the details.
+            I founded Refraxis to build AI document processing systems for Canadian 
+            regulated industries — accounting firms, municipalities, legal practices, and crown corporations 
+            that need their data kept in Canada and their workflows actually automated.
+            The projects I work on are the technical foundation of what we do at Refraxis.
           </p>
           <p className={styles.body}>
-            Outside of AI, I have a solid CS foundation — data structures,
-            algorithms, databases, systems — and I've picked up full-stack
-            skills along the way. I'm looking for projects and opportunities
-            where I can keep growing while contributing something real. 
+            I'm also a fourth-year Computer Science student at University of Toronto
+            with minors in Mathematics and History of Religions. My foundation in CS -
+            data structures, algorithms, databases, systems - informs how I build.
           </p>
         </FadeUp>
 
