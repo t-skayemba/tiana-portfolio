@@ -14,7 +14,7 @@ export default function FooterHint() {
             onMouseEnter={e => e.target.style.opacity = 0.5}
             onMouseLeave={e => e.target.style.opacity = 0.12}
         >
-            Still here? You might enjoy the rest of the cite ↗
+            Have a nice day 🙂
         </p>
     )
 }
